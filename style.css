@@ -1051,8 +1051,12 @@ ul {
     .dark-grid {
         grid-template-columns: 1fr 1fr;
     }
+    .hero-content {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
     .hero-content h1 {
-        font-size: 60px;
+        font-size: 52px;
     }
 }
 
@@ -1069,6 +1073,14 @@ ul {
     .hero-visual {
         height: auto;
         background: none;
+    }
+    .hero-content {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+    .hero-content h1 {
+        font-size: 44px;
+        letter-spacing: -1px;
     }
     .sand-dune {
         display: none;
@@ -1096,5 +1108,38 @@ ul {
     }
     .footer-contact, .footer-social {
         text-align: left;
+    }
+    .sh-left h2 {
+        font-size: 32px !important;
+        line-height: 1.1;
+    }
+    .sh-right, .content-left {
+        max-width: 100%;
+    }
+    .service-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .portfolio-info {
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+    }
+    .portfolio-info h4 {
+        font-size: 18px;
+    }
+    .portfolio-info span {
+        font-size: 10px;
+    }
+    .team-slider-wrapper {
+        height: 300px;
+    }
+    .team-slide-group .image-box {
+        width: 200px;
+    }
+    .footer-links-col {
+        flex-direction: column;
+        gap: 15px;
     }
 }
