@@ -12,9 +12,33 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="#" class="logo"><img src="logo.png" alt="Brand Logo" class="logo-img"></a>
+        <div class="nav-left">
+            <a href="#" class="logo"><img src="logo.png" alt="Brand Logo" class="logo-img"></a>
+            <div class="nav-divider desktop-only"></div>
+            <ul class="nav-links desktop-only">
+                <li><a href="#">Portafolio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Recursos</a></li>
+            </ul>
+        </div>
+        
+        <div class="nav-right desktop-only">
+            <a href="#" class="contacto-link">Contacto</a>
+            <a href="#" class="btn btn-dark btn-presupuesto">
+                <span class="btn-text">Solicita tu presupuesto</span>
+            </a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+
         <div class="nav-menu">
-            <ul class="nav-links">
+            <ul class="nav-links-mobile">
                 <li><a href="#">Portafolio</a></li>
                 <li><a href="#">Servicios</a></li>
                 <li><a href="#">Recursos</a></li>
@@ -22,76 +46,91 @@
                 <li class="mobile-budget-btn"><a href="#" class="btn btn-dark">Solicita tu presupuesto</a></li>
             </ul>
         </div>
-        <div class="nav-right">
-            <a href="#" class="btn btn-dark btn-presupuesto">
-                <span class="btn-text">Solicita tu presupuesto</span>
-                <i data-lucide="file-text" class="btn-icon"></i>
-            </a>
-            <button class="menu-toggle" aria-label="Abrir menú">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-        </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Creemos juntos la<br>marca que te mereces</h1>
-
-            <p>Combinamos estrategia, creatividad y pasión para hacer evolucionar tu negocio, captar la atención de tu público ideal y alcanzar juntos tus objetivos.</p>
-        </div>
-        
-        <div class="hero-visual">
-            <div class="sand-dune"></div>
+    <!-- Hero Wrapper for Background -->
+    <div class="hero-wrapper">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Creemos juntos la<br>marca que te mereces</h1>
+                <p>Combinamos estrategia, creatividad y pasión para hacer evolucionar tu negocio, captar la atención de tu público ideal y alcanzar juntos tus objetivos.</p>
+            </div>
             
-            <div class="hero-cards">
-                <div class="card">
-                    <div class="card-header">
-                        Gestión de Redes Sociales
-                        <span class="arrow">↗</span>
+            <div class="hero-visual">
+                <div class="sand-dune"></div>
+                <div class="hero-cards">
+                    <div class="card">
+                        <div class="card-header">
+                            Gestión de Redes Sociales
+                            <span class="arrow">↗</span>
+                        </div>
+                        <div class="card-body-flex">
+                            <h3>Tú te enfocas en tu negocio, nosotros hacemos crecer tus redes.</h3>
+                            <img src="images/gestion-de-redes-sociales.png" alt="Redes Sociales">
+                        </div>
                     </div>
-                    <div class="card-body-flex">
-                        <h3>Tú te enfocas en tu negocio, nosotros hacemos crecer tus redes.</h3>
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=150&q=80" alt="Redes Sociales">
+                    <div class="card">
+                        <div class="card-header">
+                            Pantallas Publicitarias
+                            <span class="arrow">↗</span>
+                        </div>
+                        <div class="card-body-flex">
+                            <h3>Pon tu negocio donde todos están mirando</h3>
+                            <img src="images/pantallas.png" alt="Pantallas">
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        Pantallas Publicitarias
-                        <span class="arrow">↗</span>
-                    </div>
-                    <div class="card-body-flex">
-                        <h3>Pon tu negocio donde todos están mirando</h3>
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=150&q=80" alt="Pantallas">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        Branding
-                        <span class="arrow">↗</span>
-                    </div>
-                    <div class="card-body-flex">
-                        <h3>Destaca en tu mercado. Deja huella.</h3>
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=150&q=80" alt="Branding">
+                    <div class="card">
+                        <div class="card-header">
+                            Branding
+                            <span class="arrow">↗</span>
+                        </div>
+                        <div class="card-body-flex">
+                            <h3>Destaca en tu mercado. Deja huella.</h3>
+                            <img src="images/branding.png" alt="Branding">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Logos -->
     <section class="trusted-logos">
         <p>Con la confianza de empresas innovadoras en todo el mundo</p>
-        <div class="logos">
-            <span>Evernote</span>
-            <span>amazon</span>
-            <span>Airtable</span>
-            <span>GUMROAD</span>
-            <span>Notion</span>
+        <div class="logos-slider">
+            <div class="logos-track">
+                <!-- Original set -->
+                <div class="logos-slide">
+                    <img src="images/clients/1.png" alt="Client 1">
+                    <img src="images/clients/2.png" alt="Client 2">
+                    <img src="images/clients/3.png" alt="Client 3">
+                    <img src="images/clients/4.png" alt="Client 4">
+                    <img src="images/clients/5.png" alt="Client 5">
+                    <img src="images/clients/6.png" alt="Client 6">
+                    <img src="images/clients/7.png" alt="Client 7">
+                    <img src="images/clients/8.png" alt="Client 8">
+                    <img src="images/clients/9.png" alt="Client 9">
+                    <img src="images/clients/10.png" alt="Client 10">
+                    <img src="images/clients/11.png" alt="Client 11">
+                    <img src="images/clients/12.png" alt="Client 12">
+                </div>
+                <!-- Duplicate set for seamless loop -->
+                <div class="logos-slide" aria-hidden="true">
+                    <img src="images/clients/1.png" alt="Client 1">
+                    <img src="images/clients/2.png" alt="Client 2">
+                    <img src="images/clients/3.png" alt="Client 3">
+                    <img src="images/clients/4.png" alt="Client 4">
+                    <img src="images/clients/5.png" alt="Client 5">
+                    <img src="images/clients/6.png" alt="Client 6">
+                    <img src="images/clients/7.png" alt="Client 7">
+                    <img src="images/clients/8.png" alt="Client 8">
+                    <img src="images/clients/9.png" alt="Client 9">
+                    <img src="images/clients/10.png" alt="Client 10">
+                    <img src="images/clients/11.png" alt="Client 11">
+                    <img src="images/clients/12.png" alt="Client 12">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -108,35 +147,24 @@
                 <div class="icon-key">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>
                 </div>
-                <h2>Con la confianza de cientos de negocios en crecimiento</h2>
-                <p>Cada campaña está impulsada por la creatividad, los datos y la ejecución para ayudar a las marcas a lograr un éxito medible en todos los canales.</p>
+                <h2>Las grandes marcas no se construyen a solas; exigen el equipo correcto</h2>
+                <p>Detrás de cada caso de éxito, evento memorable o estrategia ganadora, hay profesionales ejecutando con precisión</p>
             </div>
-            <div class="dark-box stats-box">
-                <div class="avatars-large">
-                    <img src="https://i.pravatar.cc/100?img=5" alt="User">
-                    <img src="https://i.pravatar.cc/100?img=6" alt="User">
-                    <img src="https://i.pravatar.cc/100?img=7" alt="User">
-                    <img src="https://i.pravatar.cc/100?img=8" alt="User">
-                    <img src="https://i.pravatar.cc/100?img=9" alt="User">
-                    <img src="https://i.pravatar.cc/100?img=10" alt="User">
+            <div class="team-slider-wrapper">
+                <div class="team-slider-track">
+                    <div class="team-slide-group">
+                        <div class="dark-box image-box"><img src="images/memories/1.png" alt="Memory 1"></div>
+                        <div class="dark-box image-box"><img src="images/memories/2.png" alt="Memory 2"></div>
+                        <div class="dark-box image-box"><img src="images/memories/3.png" alt="Memory 3"></div>
+                        <div class="dark-box image-box"><img src="images/memories/4.png" alt="Memory 4"></div>
+                    </div>
+                    <div class="team-slide-group" aria-hidden="true">
+                        <div class="dark-box image-box"><img src="images/memories/1.png" alt="Memory 1"></div>
+                        <div class="dark-box image-box"><img src="images/memories/2.png" alt="Memory 2"></div>
+                        <div class="dark-box image-box"><img src="images/memories/3.png" alt="Memory 3"></div>
+                        <div class="dark-box image-box"><img src="images/memories/4.png" alt="Memory 4"></div>
+                    </div>
                 </div>
-                <div class="stat-bottom">
-                    <h3>56M+</h3>
-                    <span>Conversiones totales</span>
-                </div>
-            </div>
-            <div class="dark-box award-box">
-                <div class="award-header">
-                    <span class="score">10+<br><small>Premios de la industria</small></span>
-                    <span class="badge">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 15l-3.5 2 1-4-3-2.5 4-.5L12 6l1.5 4 4 .5-3 2.5 1 4z"></path></svg>
-                        <br>Mejor Diseño<br>UI/UX 2023
-                    </span>
-                </div>
-                <p>Ayudando a las empresas a crecer a través de estrategias creativas y un rendimiento comprobado.</p>
-            </div>
-            <div class="dark-box image-box">
-                 <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=400&q=80" alt="Working">
             </div>
         </div>
     </section>
@@ -146,7 +174,7 @@
         <div class="services-header">
             <div class="sh-left">
                 <span class="tag">✦ NUESTROS SERVICIOS</span>
-                <h2>Creemos un marketing<br>que ofrezca resultados reales.</h2>
+                <h2>Démosle a tu negocio<br>el enfoque que busca.</h2>
                 <a href="#" class="btn btn-dark">Inicia tu proyecto ↗</a>
             </div>
             <div class="sh-right">
@@ -154,8 +182,8 @@
                 <div class="service-tags">
                     <span>✓ Estrategia y planificación</span>
                     <span>✓ Creación de contenido</span>
-                    <span>✓ Marketing de rendimiento</span>
-                    <span>✓ Optimización SEO</span>
+                    <span>✓ Asesorias Corporativas</span>
+                    <span>✓ Pautas Publicitarias</span>
                 </div>
             </div>
         </div>
@@ -165,49 +193,44 @@
             <div class="accordion-item expanded">
                 <div class="accordion-header">
                     <span class="num">01</span>
-                    <h3>Dirección de marca</h3>
-                    <span class="toggle">-</span>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-left">
-                        <p>Construye una base sólida con un posicionamiento, mensajes y una identidad visual claros que ayuden a que tu marca destaque y sea memorable.</p>
-                    </div>
-                    <div class="content-right">
-                        <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=300&q=80" alt="Brand">
-                        <img src="https://images.unsplash.com/photo-1512758117904-802c67b3f9b2?auto=format&fit=crop&w=300&q=80" alt="Strategy">
-                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=300&q=80" alt="Meeting">
-                    </div>
-                </div>
+                      <h3>Gestión de Redes Sociales</h3>
+                      <span class="toggle">-</span>
+                  </div>
+                    <div class="accordion-content">
+                        <div class="content-left">
+                            <p>Planificamos, diseñamos y publicamos el contenido adecuado para tu audiencia, manteniendo tus redes organizadas y activas. El objetivo es que tengas una presencia digital constante mientras tú te concentras en la operatividad de tu negocio.</p>
+                        </div>
+                  </div>
             </div>
             <div class="accordion-item">
                 <div class="accordion-header">
                     <span class="num">02</span>
-                    <h3>Marketing de rendimiento</h3>
-                    <span class="toggle">+</span>
-                </div>
-                <div class="accordion-content">
-                     <div class="content-left"><p>Campañas basadas en datos para llegar a tu audiencia de manera eficiente, aumentar las conversiones y maximizar el retorno de inversión de tu marketing.</p></div>
-                </div>
+                      <h3>Producción Audiovisual</h3>
+                      <span class="toggle">+</span>
+                  </div>
+                  <div class="accordion-content">
+                       <div class="content-left"><p>Desde fotografías de tus productos, instalaciones y equipo de trabajo, hasta videos pensados para redes sociales o uso corporativo, cuidando siempre los detalles y la calidad de la imagen.</p></div>
+                  </div>
             </div>
             <div class="accordion-item">
                 <div class="accordion-header">
                     <span class="num">03</span>
-                    <h3>Contenido creativo</h3>
-                    <span class="toggle">+</span>
-                </div>
-                 <div class="accordion-content">
-                     <div class="content-left"><p>Imágenes atractivas y contenido persuasivo que captan la atención, fortalecen tu marca e inspiran a la acción.</p></div>
-                </div>
+                      <h3>Branding e Identidad Corporativa</h3>
+                      <span class="toggle">+</span>
+                  </div>
+                   <div class="accordion-content">
+                       <div class="content-left"><p>Desarrollamos desde el diseño de tu logotipo y la selección de tu paleta de colores, hasta el manual de marca, asegurándonos de que tu empresa mantenga una misma línea en todo lo que haga.</p></div>
+                  </div>
             </div>
             <div class="accordion-item">
                 <div class="accordion-header">
                     <span class="num">04</span>
-                    <h3>Analítica y optimización</h3>
-                    <span class="toggle">+</span>
-                </div>
-                 <div class="accordion-content">
-                     <div class="content-left"><p>Mide el rendimiento de las campañas, descubre información procesable y optimiza continuamente cada esfuerzo de marketing para obtener mejores resultados.</p></div>
-                </div>
+                      <h3>Pantallas Publicitarias</h3>
+                      <span class="toggle">+</span>
+                  </div>
+                   <div class="accordion-content">
+                       <div class="content-left"><p>Llevamos tu mensaje a las calles. Es un formato directo y tradicional que te ayuda a ganar visibilidad y mantenerte presente en el recorrido diario de las personas.</p></div>
+                  </div>
             </div>
         </div>
     </section>
@@ -216,31 +239,31 @@
     <section class="portfolio">
         <div class="portfolio-grid">
             <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=80" alt="Wild Bloom">
+                <img src="images/portfolio-in-home/mafoko.png" alt="Mafoko">
                 <div class="portfolio-info">
-                    <h4>Wild Bloom</h4>
-                    <span>Diseño UX/UI, Desarrollo Web, Branding</span>
+                    <h4>MAFOKO</h4>
+                    <span>DESARROLLO DE BRANDING</span>
                 </div>
             </div>
             <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Tixz">
+                <img src="images/portfolio-in-home/empanadera.jpg" alt="La Empanadera">
                 <div class="portfolio-info">
-                    <h4>Tixz</h4>
-                    <span>Diseño y desarrollo de apps, Presentaciones</span>
+                    <h4>LA EMPANADERA</h4>
+                    <span>DESARROLLO DE BRANDING</span>
                 </div>
             </div>
             <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80" alt="Studio">
+                <img src="images/portfolio-in-home/arhoma.jpg" alt="Arhoma Barquisimeto">
                 <div class="portfolio-info">
-                    <h4>Studio</h4>
-                    <span>Fotografía, Dirección de marca</span>
+                    <h4>ARHOMA BARQUISIMETO</h4>
+                    <span>GESTIÓN DE REDES SOCIALES Y FOTOGRAFÍA</span>
                 </div>
             </div>
             <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Lomihtu">
+                <img src="images/portfolio-in-home/delanonna.png" alt="Dellanonna">
                 <div class="portfolio-info">
-                    <h4>Lomihtu</h4>
-                    <span>Diseño 3D y Motion, Dirección de arte</span>
+                    <h4>DELLANONNA</h4>
+                    <span>DESARROLLO DE BRANDING Y PACKAGING</span>
                 </div>
             </div>
         </div>
@@ -252,34 +275,21 @@
             <div class="footer-links-col">
                 <a href="#">Portafolio ↗</a>
                 <a href="#">Servicios ↗</a>
-                <a href="#">Proyectos ↗</a>
-                <a href="#">Estudio ↗</a>
-                <a href="#">Precios</a>
+                <a href="#">Recursos ↗</a>
             </div>
             <div class="footer-contact">
-                <p>+1 (555) 000-0000</p>
-                <p>hola@brand.com</p>
+                <p>+58 (414) 354 5492</p>
+                <p>contacto@brandvzla.com</p>
             </div>
             <div class="footer-social">
-                <a href="#">Instagram</a>
-                <a href="#">Telegram</a>
+                <a href="https://www.instagram.com/brand.ve" target="_blank" rel="noopener noreferrer">Instagram</a>
             </div>
         </div>
-        <div class="footer-middle">
-            <div class="fm-links">
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
-            </div>
-            <div class="fm-address">
-                <p>123 Technology St, Valley, CA 94000</p>
-            </div>
-            <div class="fm-arrow">↑</div>
+        <div class="footer-middle" style="justify-content: center;">
+            <p style="margin: 0;">&copy; 2020 Brand Corporation C.A. Todos los derechos reservados.</p>
         </div>
-        <div class="footer-bottom">
-            <div class="footer-logo">
-                <svg class="star" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L12 22M2 12L22 12M4.93 4.93L19.07 19.07M4.93 19.07L19.07 4.93"></path></svg>
-                Brand
-            </div>
+        <div class="footer-bottom" style="display: flex; justify-content: center; align-items: flex-end; padding-top: 40px;">
+            <img src="images/white-logo.png" alt="Brand Logo" style="width: 100%; height: auto; display: block; margin: 0 auto;">
         </div>
     </footer>
 
